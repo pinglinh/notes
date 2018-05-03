@@ -64,3 +64,13 @@ export function inputValue(text) {
 
 * Also learned that controlled components such as `<input>` maintain their own state so if we also controlling this with state elsewhere we need to choose between the 2. This was the error message when I had `<input type="text" value={props.value} onChange={props.handleChange} />`:
   * *A component is changing a controlled input of type text to be uncontrolled. Input elements should not switch from controlled to uncontrolled (or vice versa). Decide between using a controlled or uncontrolled input element for the lifetime of the component.*
+  * So I removed `value={props.value}` and this fixed the error
+
+* **ES6 imports**
+  * You can do `import * as API from "path/to/file"` and this will allow you to call any methods/variables as `API.method() or API.variable`
+  * This will only be available if you have exported the thing
+  * If you have a `export default` in the file, you will need to do `API.default() or API.default` as that specific function/variable is now named that
+  * I received an error when I tried to do `API.method()` saying that `method()` was not a function
+
+* **Concept of closures**
+  
