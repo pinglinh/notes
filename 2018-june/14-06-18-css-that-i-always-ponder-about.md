@@ -18,6 +18,31 @@ This means, apply the following styles in `.second` class, which is nested insid
 </div>
 ```
 
+`.first` class is the parent selector and `.second` is the child selector.
+
+In SCSS, you can apply the styles like so:
+
+```SCSS
+.first {
+  border: 1px solid blue;
+  .second {
+    border: 1px solid red;
+  }
+}
+```
+
+which then compiles to:
+
+```CSS
+.first {
+  border: 1px solid blue;
+}
+
+.first .second {
+  border: 1px solid red;
+}
+```
+
 If the css classes don't have space between them, e.g.:
 
 ```css
