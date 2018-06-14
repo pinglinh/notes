@@ -43,6 +43,10 @@ which then compiles to:
 }
 ```
 
+I asked myself, why would you want `.first` if you're only targeting `.second`?
+
+But if you only want to target the `.second` class within the `.first` then you would use this css. Otherwise if you only target `.second`, it will target all your elements with `.second` class regardless of whether it's nested within `.first` class or not.
+
 If the css classes don't have space between them, e.g.:
 
 ```css
